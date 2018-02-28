@@ -1,9 +1,9 @@
-Design
+Objectif
 
 L’objectif de ce projet est de construire une application type réseau social permettant de comparer sa consommation électrique avec ses amis, ses voisins, … dans la lignée de opower. 
 
 @Entity
-Ca permet de créer une table coté
+Ca permet de créer une table coté hibernate
 
 
 But
@@ -28,21 +28,21 @@ Une personne a une liste d’amis en ajoutant la relation (@manytomany)
 
 
 Home
-Résidence dans la philosophie du code on a décide que la relation (@onetomany) qui peut être le propriétaire de cette home ,design
+Résidence dans la philosophie du code on a compris d'aprés le schéma que le propriétaire de cette résidence est une seule personne  ce qu'on a exprimé par la relation (@onetomany) coté home 
 Heater
 
 Un chauffage est lié a une seule résidence , alors que dans une résidence on peut trouver plusieurs chauffages ( @onetomany)
 
 
 
-	 Pour l’héritage  nous avons choisi « SingleTable » stratégie , une seule table est utilisée pour stocker toutes les instances de la hiérarchie d’héritage entiére.
+	 Pour l’héritage  nous avons choisi la « SingleTable » stratégie , une seule table (classe mére) est utilisée pour stocker toutes les instances de la hiérarchie d’héritage entiére.
 
 	ElectronicDevice
 	la classe qui va être créer en disant « phone» est une sous-classe de Device en ajoutant l’annotation @DiscriminatorValue pour déterminer quelle classe une ligne particulière fait partie dans le tableau de classe mére dans notre ças on veut la distinguer de la classe « Heater » en fmettant @DiscriminatorValue("phone") 
 
 	Device
 
-c’est la clase mére ,sa table aura les attributs de toutes les classe de la hiérarchie , si une ligne n’as pas les attributs de l’autre on met null .
+	c’est la clase mére ,sa table aura les attributs de toutes les classe de la hiérarchie , si une ligne n’as pas les attributs qu'une autre car ils ne sont pas lié elle met null .
 
 On a définie deux packages :
 
