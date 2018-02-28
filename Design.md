@@ -1,6 +1,6 @@
 Objectif
 
-L’objectif de ce projet est de construire une application type réseau social permettant de comparer sa consommation électrique avec ses amis, ses voisins, … dans la lignée de opower. 
+L’objectif de ce projet est de construire une application type réseau social permettant de comparer sa consommation électrique avec ses amis, ses voisins,.. 
 
 @Entity
 Ca permet de créer une table coté hibernate
@@ -20,7 +20,7 @@ Ayant a respecter le modèle métier qui nous a été donné en énonce :
 
 
 
-Objects
+Objects (persistence)
 
 
 Person
@@ -51,4 +51,4 @@ On a définie deux packages :
 
 dao : pour la gestion de  la base de données , tpour faire les liasons entre les tables tout ce qui est lié aux requêtes avec .merge pour la modification , .persisit pour l’ajout , .delete pour la supression a partir de la classe EntityManager .
 
-domain : la ou on définit les classes précedentes ( la partie persistrence)
+domain : la ou on définit les classes précedentes ( la partie Objects)
