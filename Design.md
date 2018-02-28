@@ -24,11 +24,14 @@ Objects
 
 
 Person
+
 Une personne a une liste d’amis en ajoutant la relation (@manytomany)
 
 
 Home
+
 Résidence dans la philosophie du code on a compris d'aprés le schéma que le propriétaire de cette résidence est une seule personne  ce qu'on a exprimé par la relation (@onetomany) coté home 
+
 Heater
 
 Un chauffage est lié a une seule résidence , alors que dans une résidence on peut trouver plusieurs chauffages ( @onetomany)
