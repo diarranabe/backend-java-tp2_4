@@ -4,9 +4,8 @@ L’objectif de ce projet est de construire une application type réseau social 
 
 ## Getting Started
 
-#### Design
-Please refer to the [design](docs/design.md) for more information.
-
+### Design
+La conception est dans le fichier "Design.md"
 ### Prerequisites
 
 ```
@@ -20,40 +19,48 @@ Please refer to the [design](docs/design.md) for more information.
 
 ```
 
-### Installing
+### Installation
 
-1: Configuration server 
+1: Configuration du server 
 
 
- dans le ficher persistence.xml (src/java/resources/META-INF) 
-utiliser les informations de votre server 'nom' 'password' et nom de la BD  'jpaservelet'
+ Dans le ficher persistence.xml (src/java/resources/META-INF) 
+Utiliser les informations de votre server 'nom' 'password' et nom de la BD  "jpaservelet" dans notre cas
 
             <property name="hibernate.connection.password" value="yourPassword"/>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost/YourBDName"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost/jpaservelet"/>
             <property name="hibernate.connection.username" value="Name"/>
 
-2: Demarer votre server (Wamp)
+2: Demarer votre server (Wamp : http://www.wampserver.com/en/ dans notre cas)
 
-3: lancer l'application JpaTest(Java)
+3: Lancer l'application JpaTest(Java)
 ```
 il créaion des tables dans la BD
 ```
 
-4: Lancer l'application MyServlet (Maven)
+4: Lancer Maven avec:
 ```
-GLOA : tomcat7:run
+Goal : tomcat7:run
 ```
-5: Faite vos requetes (postman) ou utiliser le navigateur web pour le visionage des données
+5: Faite vos requetes avec Postman https://www.getpostman.com/ ou autre outil pour les interactions avec les données.
+Il donc possible de manipuler:
+* Les personnes (/person)
+* Les résidences (/home)
+* Les chauffages (/heater)
+* Les équipements électroniques (/electro)
 
+Exemple:
+http://localhost:8080/rest/person/3/home/3/heater/14
 
+Cette url retourne en GET les informations du Chauffage avec l'id 14 dans la Résidence avec l'id 3 de la Personne ayant l'id 3
 
-## Authors
+A cela s'ajoute interface (front) réalisée avec les Servlet pour un affichage avec Bootstrap ( n'offre pas encore toutes les fonctionalités ci-dessus)
 
-* **Nabe** - *work* - [PurpleBlue](https://github.com/diarranabe)
-* **Nada** - *work* - [PurpleOrange](https://github.com/nadaez)
-* **Maud** - *work* - [PurpleBlack](https://github.com/maudmcok)
+## Auteurs
 
-See also the list of [contributors](https://github.com/diarranabe/backend-java-tp2_4/contributors) who participated in this project.
+* **Nabé N. Diarrassouba** (https://github.com/diarranabe)
+* **Nada Ez Zirray** (https://github.com/nadaez)
+* **Charles Oliviers Maud** (https://github.com/maudmcok)
 
 ## License
 
