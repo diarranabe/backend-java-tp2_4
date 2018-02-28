@@ -15,6 +15,11 @@ Le but c’est de se familiariser avec hibernate , l’héritage en hibernante,
 Schéma
 Ayant a respecter le modèle métier qui nous a été donné en énonce :
 
+
+![](/mcd.png?raw=true)
+
+
+
 Objects
 
 
